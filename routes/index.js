@@ -22,9 +22,12 @@ router.post('/coordinates', function(req, res, next) {
         return res.status(200).json({ message: 'Duplicate coordinate discarded' });
       } else {
         // Create a new coordinate object
+        const now = Date.now();
+        console.log(now)
         const coordinate = new Coordinate({
           latitude: latitude,
-          longitude: longitude
+          longitude: longitude,
+          timestamp:now
         });
 
         // Save the coordinate to the database

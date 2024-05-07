@@ -6,6 +6,9 @@ var scheme = new mongoose.Schema({
     },
     latitude:{
         type: String,
+    },
+    timestamp:{
+        type:Object
     }
 })
 
