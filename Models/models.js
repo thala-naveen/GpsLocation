@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 
 var scheme = new mongoose.Schema({
     longitude:{
-        type:String,
+        type:Object,
     },
     latitude:{
-        type: String,
+        type: Object,
     },
     timestamp:{
         type:Object

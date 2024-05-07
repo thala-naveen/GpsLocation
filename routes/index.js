@@ -14,7 +14,7 @@ router.post('/coordinates', function(req, res, next) {
   const { latitude, longitude } = req.body;
 
   // Check if a coordinate with the same latitude and longitude exists
-  Coordinate.findOne({ latitude: latitude, longitude: longitude })
+  Coordinate.findOne({ longitude: longitude,latitude: latitude })
     .then(existingCoordinate => {
       if (existingCoordinate) {
         // If a coordinate with the same latitude and longitude exists, discard it
